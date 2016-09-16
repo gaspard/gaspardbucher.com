@@ -1,0 +1,22 @@
+{
+  "name": "gaspardbucher-website",
+  "version": "1.0.0",
+  "description": "gaspardbucher.com website, built with Cerebraljs, Inferno and state.json (no database).",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gaspard/gaspardbucher.com.git"
+  },
+  "author": "Gaspard Bucher <gaspard@lucidogen.io> (http://lucidogen.io)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gaspard/gaspardbucher.com/issues"
+  },
+  "homepage": "https://github.com/gaspard/gaspardbucher.com#readme",
+  "dependencies": {
+    "octokat": "^0.4.18"
+  }
+}
