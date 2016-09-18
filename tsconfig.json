@@ -1,0 +1,19 @@
+{ "exclude":
+  [ "node_modules"
+  , "app/build"
+  , ".git"
+  , "cerebral-devtools"
+  , "typings/browser"
+  , "typings/browser.d.ts"
+  ]
+, "compilerOptions":
+  { "outDir": "dist"
+  , "target": "es6"
+  , "module": "commonjs"
+  , "reactNamespace": "Component"
+  , "sourceMap": true
+  , "experimentalDecorators": true
+  , "jsx": "React"
+  }
+, "compileOnSave": false
+}
