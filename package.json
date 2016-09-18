@@ -4,7 +4,8 @@
   "description": "gaspardbucher.com website, built with Cerebraljs, Inferno and state.json (no database).",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "webpack-dev-server --config app.webpack.config.js --inline --content-base app"
   },
   "repository": {
     "type": "git",
@@ -16,7 +17,23 @@
     "url": "https://github.com/gaspard/gaspardbucher.com/issues"
   },
   "homepage": "https://github.com/gaspard/gaspardbucher.com#readme",
+
+  "devDependencies": {
+    "css-loader": "^0.23.1",
+    "deep-equal": "^1.0.1",
+    "electron-prebuilt": "^1.2.5",
+    "jasmine": "^2.4.1",
+    "node-sass": "^3.7.0",
+    "raw-loader": "^0.5.1",
+    "sass-loader": "^3.2.0",
+    "style-loader": "^0.13.1",
+    "ts-loader": "^0.8.2",
+    "webpack": "^1.13.0",
+    "webpack-dev-server": "^1.14.1"
+  },
   "dependencies": {
+    "bluebird": "^3.4.6",
+    "github-api": "^2.3.0",
     "octokat": "^0.4.18"
   }
 }
