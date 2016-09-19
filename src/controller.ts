@@ -1,25 +1,14 @@
 import {Controller} from 'cerebral'
-import model from './model'
+import * as Model from 'cerebral/models/immutable'
 import * as Devtools from 'cerebral-module-devtools'
 
-// import updateItemTitle from './chains/updateItemTitle'
-// import addNewItem from './chains/addNewItem'
+import Data from './modules/Data'
 
-const controller = Controller(model)
-
-controller.addSignals ( {} )
-/*
-( { newItemTitleChanged: {
-      chain: updateItemTitle,
-      immediate: true
-    }
-  , newItemTitleSubmitted: addNewItem
-  }
-)
-*/
+const controller = Controller ( Model ( {} ) )
 
 controller.addModules
-( { devtools: Devtools ()
+( { data: Data
+  , devtools: Devtools ()
   }
 )
 

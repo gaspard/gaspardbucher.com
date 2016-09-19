@@ -1,4 +1,13 @@
 {
-  "host": "gaspardbucher.com",
-  "description": "Official website for Swiss artist Gaspard Bucher"
+  "info": {
+    "host": "gaspardbucher.com",
+    "description": "Official website for Swiss artist Gaspard Bucher"
+  },
+  "model": {
+    "thing": [
+      { "name": "name", "type": "string" },
+      { "name": "date", "type": "date" },
+      { "name": "description", "type": "text" }
+    ]
+  }
 }

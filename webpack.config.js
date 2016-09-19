@@ -54,6 +54,7 @@ module.exports =
       */
     ]
   }
+, externals: { xmlhttprequest: "XMLHttpRequest" }
 , plugins: plugins
 }
 /*

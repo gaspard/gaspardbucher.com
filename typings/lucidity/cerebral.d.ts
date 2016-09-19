@@ -16,6 +16,7 @@ declare module Cerebral {
 
 declare module 'cerebral' {
   export function Controller ( model: any ): Cerebral.Controller
+  export function Computed ( paths: any, func: any ): any
 }
 
 declare module 'cerebral-module-devtools' {
