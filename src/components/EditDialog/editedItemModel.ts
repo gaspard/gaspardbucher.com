@@ -5,6 +5,9 @@ export default Computed
   , model: 'data.model'
   }
 , ( { type, model } ) => {
+    if ( !type || !model ) {
+      return {}
+    }
     return model [ type ] || {}
   }
 )

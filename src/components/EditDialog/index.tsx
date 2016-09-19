@@ -14,7 +14,7 @@ export default Component
   }
 , ( { item, model, id, type, showDialog, signals } ) => {
     if ( !showDialog ) {
-      return ''
+      return <div class='EditDialog' style='display:none'></div>
     }
     return <div class='EditDialog'>
         <div class='type'>{ type }</div>

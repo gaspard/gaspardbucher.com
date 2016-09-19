@@ -23,7 +23,8 @@
     "cerebral": "^1.0.0",
     "cerebral-module-devtools": "0.7.2",
     "cerebral-view-inferno": "^1.0.x",
-    "octokat": "^0.4.18"
+    "octokat": "^0.4.18",
+    "uuid": "^2.0.3"
   },
   "devDependencies": {
     "babel-core": "^6.7.x",
