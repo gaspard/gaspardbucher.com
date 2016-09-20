@@ -20,9 +20,9 @@
     "build": "webpack --config webpack.config.js --progress --verbose"
   },
   "dependencies": {
-    "cerebral": "^1.0.0",
-    "cerebral-module-devtools": "0.7.2",
-    "cerebral-view-inferno": "^1.0.x",
+    "cerebral": "^1.0.1",
+    "cerebral-module-devtools": "^0.7.2",
+    "cerebral-view-inferno": "^1.1.5",
     "octokat": "^0.4.18",
     "uuid": "^2.0.3"
   },

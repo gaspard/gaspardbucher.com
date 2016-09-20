@@ -1,5 +1,4 @@
 import { Component } from '../../Component'
-import editedItem from './editedItem'
 import editedItemModel from './editedItemModel'
 import makeInput from './makeInput'
 
