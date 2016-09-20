@@ -6,17 +6,15 @@ import makeInput from './makeInput'
 import './style.scss'
 
 export default Component
-( { item: editedItem ()
+( { item: 'Sdata.draft'
   , model: editedItemModel ()
-  , id: 'Sdata.editId'
-  , type: 'Sdata.editType'
   , showDialog: 'Sdata.showEditDialog'
   }
 , { cancelEdit: 'data.cancelEditClicked'
   , validateEdit: 'data.validateEditClicked'
   , itemFieldChanged: 'data.itemFieldChanged'
   }
-, ( { item, model, id, type, showDialog
+, ( { item, model, showDialog
     , cancelEdit, validateEdit, itemFieldChanged
     }
   ) => {
@@ -28,14 +26,14 @@ export default Component
 
     const validate = ( e ) => {
       e.preventDefault ()
-      validateEdit ( { id, type } )
+      validateEdit ( { id: item.id, type: item.type } )
     }
 
     return <div class='EditDialog' onClick={ cancelEdit }>
         <div class='dialog' onClick={ stopEvent }>
           <div class='header'>
-            <div class='id'>{ id }</div>
-            <div class='type'>{ type }</div>
+            <div class='id'>{ item.id }</div>
+            <div class='type'>{ item.type }</div>
           </div>
 
           <form onSubmit={ validate }>

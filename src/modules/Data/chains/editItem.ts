@@ -5,8 +5,6 @@ import loadItemDraft from '../actions/loadItemDraft'
 //   * input.id : existing or new id for the element to edit
 //   * input.type : model type (must exist in data.model)
 export default
-[ copy ( 'input:id', 'state:Sdata.editId' )
-, copy ( 'input:type', 'state:Sdata.editType' )
-, loadItemDraft
+[ loadItemDraft
 , set ( 'state:Sdata.showEditDialog', true )
 ]

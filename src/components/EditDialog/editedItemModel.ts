@@ -1,7 +1,7 @@
 import { Computed } from 'cerebral'
 
 export default Computed
-( { type: 'Sdata.editType'
+( { type: 'Sdata.draft.type'
   , model: 'data.model'
   }
 , ( { type, model } ) => {
