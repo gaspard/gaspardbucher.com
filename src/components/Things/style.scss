@@ -1,7 +1,25 @@
 .Thing {
+  text-align: center;
   border: 1px solid #333;
   padding: 10px;
   float: left;
   width: 200px;
   height: 200px;
+  cursor: pointer;
+  margin: -1px 0 0 -1px;
+
+  .name {
+    font-weight: bold;
+    font-size: 1.3em;
+  }
+
+  &.add {
+    background: #aaa;
+    color: #888;
+    font-size: 4.8em;
+
+    &:hover {
+      color: black;
+    }
+  }
 }
