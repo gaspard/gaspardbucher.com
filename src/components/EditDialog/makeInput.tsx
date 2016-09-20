@@ -4,7 +4,6 @@ export default ( fld, item, change ) => {
   const name = fld.name
   const onChange = ( e ) => {
     const value = e.target.value
-    console.log ( name + ': ' + value )
     change ( { name, value } )
   }
 

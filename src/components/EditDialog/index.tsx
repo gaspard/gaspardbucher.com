@@ -26,7 +26,8 @@ export default Component
 
     const stopEvent = ( e: Event ) => e.stopPropagation ()
 
-    const validate = () => {
+    const validate = ( e ) => {
+      e.preventDefault ()
       validateEdit ( { id, type } )
     }
 
@@ -37,7 +38,11 @@ export default Component
             <div class='type'>{ type }</div>
           </div>
 
-          { model.map ( fld => makeInput ( fld, item, itemFieldChanged ) ) }
+          <form onSubmit={ validate }>
+            { model.map ( fld => makeInput ( fld, item, itemFieldChanged ) ) }
+            <input type='submit' style='display:none' />
+          </form>
+
           <button class='validate' onClick={ validateEdit }>Validate</button>
           <button class='cancel' onClick={ cancelEdit }>Cancel</button>
         </div>

@@ -1,4 +1,5 @@
 import { copy, set } from 'cerebral/operators'
+import loadItemDraft from '../actions/loadItemDraft'
 
 // Expects input to hold:
 //   * input.id : existing or new id for the element to edit
@@ -6,6 +7,6 @@ import { copy, set } from 'cerebral/operators'
 export default
 [ copy ( 'input:id', 'state:Sdata.editId' )
 , copy ( 'input:type', 'state:Sdata.editType' )
-, set ( 'state:Sdata.draft', {} )
+, loadItemDraft
 , set ( 'state:Sdata.showEditDialog', true )
 ]
