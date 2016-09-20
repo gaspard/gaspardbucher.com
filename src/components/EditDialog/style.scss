@@ -1,0 +1,54 @@
+.EditDialog {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(30,30,30,0.7);
+  color: white;
+
+  .dialog {
+    color: #333;
+    margin: 60px;
+    padding: 20px;
+    border: 1px solid #333;
+    background: white;
+    border-radius: 3px;
+
+    .header {
+      background: #9eb7c3;
+      padding: 8px;
+      border-radius: 2px 2px 0 0;
+      margin: -20px -20px 20px -20px;
+      border-bottom: 1px solid #888;
+      color: #777;
+      .id {
+        float: right;
+      }
+      .type {
+        font-weight: bold;
+      }
+    }
+
+    label {
+      font-weight: bold;
+    }
+  }
+
+  input {
+    margin: 2em 0;
+    display: block;
+    padding: 4px;
+  }
+
+  button {
+    color: inherit;
+    display: inline-block;
+    font-weight: bold;
+    border: 1px solid #666;
+    border-radius: 2px;
+    padding: 8px 14px;
+    margin-right: 2em;
+
+    &.validate {
+      background: #09f;
+    }
+  }
+}

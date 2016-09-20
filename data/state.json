@@ -9,5 +9,15 @@
       { "name": "date", "type": "date" },
       { "name": "description", "type": "text" }
     ]
+  },
+  "thing": {
+    "eb28e175": {
+      "name": "one",
+      "date": "zzz"
+    },
+    "f43095a0": {
+      "name": "two",
+      "date": "aaa"
+    }
   }
 }

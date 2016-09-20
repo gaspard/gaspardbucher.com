@@ -1,5 +1,4 @@
 import { Computed } from 'cerebral'
-import makeId from '../../makeId'
 
 export default Computed
 ( { things: 'data.thing'
@@ -19,9 +18,7 @@ export default Computed
     ( ( a, b ) =>
         a.date > b.date ? 1 : -1
     )
-
-    // If logged in...
-    list.push ( { type: 'thing', id: makeId (), name: 'add' } )
+    console.log ( list )
 
     return list
   }

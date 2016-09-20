@@ -6,5 +6,6 @@ import { copy, set } from 'cerebral/operators'
 export default
 [ copy ( 'input:id', 'state:Sdata.editId' )
 , copy ( 'input:type', 'state:Sdata.editType' )
+, set ( 'state:Sdata.draft', {} )
 , set ( 'state:Sdata.showEditDialog', true )
 ]

@@ -12,15 +12,34 @@ export default Component
   , type: 'Sdata.editType'
   , showDialog: 'Sdata.showEditDialog'
   }
-, ( { item, model, id, type, showDialog, signals } ) => {
+, { cancelEdit: 'data.cancelEditClicked'
+  , validateEdit: 'data.validateEditClicked'
+  , itemFieldChanged: 'data.itemFieldChanged'
+  }
+, ( { item, model, id, type, showDialog
+    , cancelEdit, validateEdit, itemFieldChanged
+    }
+  ) => {
     if ( !showDialog ) {
       return <div class='EditDialog' style='display:none'></div>
     }
-    return <div class='EditDialog'>
-        <div class='type'>{ type }</div>
-        <div class='id'>{ id }</div>
-        <div class='form'>
-          { model.map ( fld => makeInput ( fld, item ) ) }
+
+    const stopEvent = ( e: Event ) => e.stopPropagation ()
+
+    const validate = () => {
+      validateEdit ( { id, type } )
+    }
+
+    return <div class='EditDialog' onClick={ cancelEdit }>
+        <div class='dialog' onClick={ stopEvent }>
+          <div class='header'>
+            <div class='id'>{ id }</div>
+            <div class='type'>{ type }</div>
+          </div>
+
+          { model.map ( fld => makeInput ( fld, item, itemFieldChanged ) ) }
+          <button class='validate' onClick={ validateEdit }>Validate</button>
+          <button class='cancel' onClick={ cancelEdit }>Cancel</button>
         </div>
       </div>
   }
