@@ -1,9 +1,11 @@
+/*
 var Promise = require ( 'bluebird' )
 Promise.onPossiblyUnhandledRejection
 ( (error) => {
     throw error;
   }
 )
+*/
 
 const Octokat = require ( 'octokat' )
 
@@ -25,16 +27,17 @@ const base64encode = data =>
 const base64decode = data =>
   JSON.parse ( new Buffer ( data, 'base64' ).toString () )
 
+/*
 file.fetch ()
 .then
 ( info => {
-    const COMMIT_ID = info.sha
+    const FILE_SHA = info.sha
     // Write file
     const data = { host: 'gaspardbucher.com', description: 'Official website for Swiss artist Gaspard Bucher' }
     const config =
     { message: 'Using octokat to update file.'
     , content: base64encode ( data )
-    , sha: COMMIT_ID
+    , sha: FILE_SHA
     }
 
     file.add ( config )
@@ -43,3 +46,25 @@ file.fetch ()
     throw new Error ( 'hop' )
   }
 )
+*/
+
+// UPLOAD AN IMAGE
+const fs  = require ( 'fs' )
+const btoa =
+( data => {
+    const buf = new Buffer ( data )
+    return buf.toString ( 'base64' )
+  }
+)
+
+const img = fs.readFileSync ( './test.jpg' )
+const config =
+{ message: 'Using octokat to update file.'
+, content: btoa ( img )
+}
+
+const image =  repo.contents ( 'image/test.jpg' )
+
+image.add ( config )
+.catch ( err => console.log )
+
